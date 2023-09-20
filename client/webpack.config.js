@@ -29,7 +29,7 @@ module.exports = () => {
         inject: true,
         name: 'Just Another Text Editor',
         short_name: 'JATE',
-        description: 'Note taking.',
+        description: 'Text Editor',
         background_color: '#225ca3',
         theme_color: '#225ca3',
         start_url: './',
@@ -44,7 +44,7 @@ module.exports = () => {
       }),
     ],
     
-// CSS loaders and babel to webpack.
+// CSS loaders and babel loader to webpack.
     module: {
       rules: [
         {

@@ -28,7 +28,7 @@ registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 // Implement asset caching.
 registerRoute(
-  ({ request }) => ['image', 'style', 'script', 'worker'].includes(request.destination),
+  ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
   new StaleWhileRevalidate({
     cacheName: 'asset-cache',
     plugins: [
@@ -41,7 +41,6 @@ registerRoute(
     ],
   })
 );
-
 
 
 // Template Structure and Code Snippets from Mini Project 19.
