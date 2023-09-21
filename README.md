@@ -15,8 +15,15 @@
 ## Description:
 * This Challenge Assignment involves building a browser-based text editor that operates as a single-page Progressive Web App (PWA). It incorporates various data persistence techniques to ensure redundancy in case of browser limitations. The application is designed to function seamlessly even when offline. The implementation leverages the idb package, a lightweight wrapper around the IndexedDB API.
 
+### User Story:
+```md
+AS A developer
+I WANT to create notes or code snippets with or without an internet connection
+SO THAT I can reliably retrieve them for later use
+```
+
 ## Installation:
-* [Jate Text Editor: Deployed Heroku.]()
+* [Jate Text Editor: Deployed Heroku.](https://txet-rotide-302baa52fde8.herokuapp.com/)
 
 ## Usage:
 * `git clone repository`
@@ -25,7 +32,7 @@
 
 
 ## Application User Interface:
-* 
+<img src="./assets/images/screenshot.png">
 
 ## Credits and Resources:
 * Google search & Youtube videos.
