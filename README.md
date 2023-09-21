@@ -3,30 +3,28 @@
 # BC19-PWA-Text-Editor
 
 ## 🌏 Table of Contents:
-- [🌱 Description](#description)
-- [🔧 Installation](#installation)
-- [🔦 Usage](#usage)
-- [📺 Application UI](#application-user-interface)
-- [💾 Credits & Resources](#credits-and-resources)
-- [💻 Coded With](#coded-with)
-- [🐋 Contributing](#contributing)
-- [📚 License](#license)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Application UI](#application-user-interface)
+- [Credits & Resources](#credits-and-resources)
+- [Coded With](#coded-with)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Description:
-* 
-* 🎥 [Video Walkthrough: PWA Text Editor.]()
-
+* This Challenge Assignment involves building a browser-based text editor that operates as a single-page Progressive Web App (PWA). It incorporates various data persistence techniques to ensure redundancy in case of browser limitations. The application is designed to function seamlessly even when offline. The implementation leverages the idb package, a lightweight wrapper around the IndexedDB API.
 
 ## Installation:
-* 
-* 
-
+* [Jate Text Editor: Deployed Heroku.]()
 
 ## Usage:
-* 🎥 [Video Walkthrough: PWA Text Editor.]()
+* `git clone repository`
+* `npm run start`
+* `npm start`
+
 
 ## Application User Interface:
-* 
 * 
 
 ## Credits and Resources:
@@ -46,8 +44,5 @@
 ## Contributing:
 * Any ideas or feedback is very much appreciated.
 
-## Status:
-* ***Still in development.***
-
 ## License:
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
