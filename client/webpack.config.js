@@ -1,3 +1,4 @@
+// Imports webpack plugins and modules.
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
@@ -6,25 +7,25 @@ const { InjectManifest } = require('workbox-webpack-plugin');
 // Configure workbox plugins for a service worker and manifest file.
 module.exports = () => {
   return {
-    mode: 'development',
-    entry: {
+    mode: 'development', // Set the mode to development.
+    entry: { // Define entry points for the app.
       main: './src/js/index.js',
       install: './src/js/install.js'
     },
-    output: {
+    output: { // Configure output settings.
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
-    plugins: [
+    plugins: [ // Configure plugins & Generate HTML file using 'index.html' as template.
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'JATE'
       }),
-      new InjectManifest({
+      new InjectManifest({ // Inject the service worker into the build.
         swSrc: './src-sw.js',
         swDest: 'src-sw.js'
       }),
-      new WebpackPwaManifest({
+      new WebpackPwaManifest({ // Generate the PWA manifest file.
         fingerprints: false,
         inject: true,
         name: 'Just Another Text Editor',
@@ -44,14 +45,14 @@ module.exports = () => {
       }),
     ],
     
-// CSS loaders and babel loader to webpack.
+// Configure module rules & CSS loaders and babel loader to webpack.
     module: {
       rules: [
-        {
+        {  // Use style-loader and css-loader for .css files.
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
         },
-        {
+        {  // Use babel-loader for transpiling .js files.
           test: /\.m?js$/,
           exclude: /node_modules/,
           use: {

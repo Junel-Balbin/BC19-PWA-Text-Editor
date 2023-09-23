@@ -1,3 +1,5 @@
+// Handles GET requests to the root URL.
+// Sends the index.html file located in the client/dist directory.
 const path = require('path');
 
 module.exports = (app) =>

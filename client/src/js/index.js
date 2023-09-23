@@ -1,11 +1,14 @@
+// Imports modules and styles.
 import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import './database';
 import '../css/style.css';
 
+// Get the main element from the DOM.
 const main = document.querySelector('#main');
 main.innerHTML = '';
 
+// Function to display a loading spinner.
 const loadSpinner = () => {
   const spinner = document.createElement('div');
   spinner.classList.add('spinner');
@@ -17,8 +20,10 @@ const loadSpinner = () => {
   main.appendChild(spinner);
 };
 
+// Create a new instance of the Editor class.
 const editor = new Editor();
 
+// Check if the editor is defined.
 if (typeof editor === 'undefined') {
   loadSpinner();
 }
