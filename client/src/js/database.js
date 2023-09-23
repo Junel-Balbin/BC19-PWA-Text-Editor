@@ -17,22 +17,35 @@ const initdb = async () =>
 
 // Logic to a method that accepts some content and adds it to the database.
 export const putDb = async (content) => {
+  // Open the 'jate' database with version 1.
   const jateDB = await openDB('jate', 1);
+  // Start a new transaction for the 'jate' object store in readwrite mode.
   const tx = jateDB.transaction('jate', 'readwrite');
+  // Get the object store from the transaction.
   const store = tx.objectStore('jate');
+  // Put a new object with id: 1 and value: content into the object store.
   const request = store.put({ id: 1, value: content });
+  // Wait for the put operation to complete and get the result.
   const result = await request;
+  // Log the result of the put operation.
   console.log(result);
 };
 
 // Logic for a method that gets all the content from the database.
 export const getDb = async () => {
+  // Open the 'jate' database with version 1.
   const jateDB = await openDB('jate', 1);
+  // Start a new transaction for the 'jate' object store in readonly mode.
   const tx = jateDB.transaction('jate', 'readonly');
+  // Get the object store from the transaction.
   const store = tx.objectStore('jate');
+  // Get the object with id: 1 from the object store.
   const request = store.get(1);
+  // Wait for the get operation to complete and get the result.
   const result =  await request;
+  // Log the value of the retrieved object.
   console.log('result.value', result);
+  // Return the value of the retrieved object or null if not found.
   return result?.value;
 };
 
