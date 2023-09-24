@@ -28,7 +28,7 @@ export const putDb = async (content) => {
   // Wait for the put operation to complete and get the result.
   const result = await request;
   // Log the result of the put operation.
-  console.log(result);
+  console.log('Saved successfully to database', result);
 };
 
 // Logic for a method that gets all the content from the database.
@@ -45,6 +45,7 @@ export const getDb = async () => {
   const result =  await request;
   // Log the value of the retrieved object.
   console.log('result.value', result);
+  console.log('Get Successful');
   // Return the value of the retrieved object or null if not found.
   return result?.value;
 };

@@ -1,5 +1,5 @@
 // Imports workbox modules and strategies.
-const { offlineFallback, warmStrategyCache } = require('workbox-recipes');
+const { warmStrategyCache } = require('workbox-recipes');
 const { CacheFirst } = require('workbox-strategies');
 const { StaleWhileRevalidate } = require('workbox-strategies');
 const { registerRoute } = require('workbox-routing');
@@ -35,7 +35,7 @@ registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 // Implement asset caching.
 registerRoute(
   // Cache style, script and worker requests.
-  ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
+  ({ request }) => ['image', 'style', 'script', 'worker'].includes(request.destination),
   new StaleWhileRevalidate({
     cacheName: 'asset-cache',
     plugins: [
